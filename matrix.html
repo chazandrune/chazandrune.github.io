@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HTML5黑客帝国文字矩阵效果</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+</head>
+<body>
+
+<div style="position:fixed; left:0; right:0; top:0; height:300px; overflow:hidden;">
+<div style="position:absolute; left:0; top:40%; right:0; text-align:center; color:#fff; font-size:40px; line-height:1; text-shadow:0 0 10px rgba(0,255,0,0.9); z-index:1; font-family:'Times New Roman', Times, serif;"><span style="font-size:40px;">黑客帝国</span><br /><span style="font-size:20px;">MATRIX</span></div>
+<canvas id="q"></canvas>
+</div>
+<script type="text/javascript" >
+var s = window.screen;
+var width = q.width = s.width;
+var height = q.height = s.height;
+var letters = Array(300).join(0).split('');
+var draw = function () {
+  q.getContext('2d').fillStyle='rgba(0,0,0,.05)';
+  q.getContext('2d').fillRect(0,0,width,height);
+  q.getContext('2d').fillStyle='#0F0';
+  q.getContext('2d').font = '12px Times';
+  letters.map(function(y_pos, index){
+    //text = String.fromCharCode(3e4+Math.random()*33);   //生成随机字符
+	text = Math.floor(Math.random()*2);   //生成随机二进制代码
+    x_pos = (index * 10)+10;
+    q.getContext('2d').fillText(text, x_pos, y_pos);
+    letters[index] = (y_pos > 0 + Math.random() * 1e4) ? 0 : y_pos + 10;
+  });
+};
+setInterval(draw, 50);
+</script>
+
+</body>
+</html>
