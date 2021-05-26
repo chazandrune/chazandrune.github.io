@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chazandrune.github.io</id>
     <title>Mopanda</title>
-    <updated>2020-11-03T15:55:28.152Z</updated>
+    <updated>2021-05-26T14:24:56.421Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chazandrune.github.io"/>
     <link rel="self" href="https://chazandrune.github.io/atom.xml"/>
     <subtitle>某熊仔的熊猫窝</subtitle>
     <logo>https://chazandrune.github.io/images/avatar.png</logo>
     <icon>https://chazandrune.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Mopanda</rights>
+    <rights>All rights reserved 2021, Mopanda</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://chazandrune.github.io/post/hello-gridea/</id>
